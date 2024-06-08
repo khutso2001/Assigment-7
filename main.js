@@ -52,13 +52,6 @@ toyMake()
 
 //async/await
 
-function mySetTimeout(delay) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve();
-    }, delay);
-  });
-}
 async function toyMake(makingTime = 3000) {
   await mySetTimeout(makingTime).then(() => {
     console.log("It takes 3 seconds to make a toy");
